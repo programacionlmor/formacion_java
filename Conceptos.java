@@ -298,10 +298,10 @@ public class Conceptos {
         } else if (entradaCompuesta[0].equals("restar")){
                   System.out.println("resta números:" +   Double.toString((Double.parseDouble(entradaCompuesta[1]) - Double.parseDouble(entradaCompuesta[2]))));
         } else if (entradaCompuesta[0].equals("multiplicar")){
-            } else {
-                      System.out.println("multiplica números:" +   Double.toString((Double.parseDouble(entradaCompuesta[1]) * Double.parseDouble(entradaCompuesta[2]))));   
+        } else {  System.out.println("multiplica números:" +   Double.toString((Double.parseDouble(entradaCompuesta[1]) * Double.parseDouble(entradaCompuesta[2]))));   
                   System.out.println("Operación desconocida");
         }
+
 
 
         //switch
@@ -367,6 +367,14 @@ public class Conceptos {
 
     
     public static double calcularMenor(double valora, double valorb) {
+         /* Estructura if-else
+            if (valora < valorb) {
+               menor = valora;            }
+            else{
+               menor = valorb;
+            }
+       */
+        
         double menor;
         menor = valora < valorb ? valora :  valorb;
         return menor;
