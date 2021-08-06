@@ -1,21 +1,23 @@
-package Modulo1;
-
 import java.util.Scanner; 
 
 public class Conceptos {
     
     public static void main(String[] args) {        
-        declararVariables();
-        declararConstantes();
-        realizarOperaciones();
-        capturarDatos();
-        realizarDecisiones();
-        crearFunciones();
-        realizarCiclos();
-        crearArreglos();
+       
+        // declararVariables();
+        // declararConstantes();
+        // realizarOperaciones();
+        // capturarDatos(); 
+        // realizarDecisiones();
+        // crearFunciones();
+        // realizarCiclos();
+        // crearArreglos();
+        // operarCadenas();
+
+
     }
 
-    
+
     public static void declararVariables() {
         byte    unByte      = 126;
         int     unEntero    = 30;
@@ -25,7 +27,6 @@ public class Conceptos {
         boolean unBooleano  = true;
         String  unString    = "java";
         char    unCaracter  = 'a';
-       
         System.out.printf("%d %d %d %f %f %b %s %c",unByte,unEntero,unLong,unDoble,unFloat,unBooleano,unString,unCaracter);
 
     }
@@ -161,35 +162,16 @@ public class Conceptos {
         // Clase Scanner
 
         // Ejemplo 1
-        Scanner miScanner;  // Create un objeto  Scanner
-        String nombre;
-        
+        Scanner  miScanner;  // Create un objeto  Scanner
+        String   nombre;
+        String[] entrada; 
+        double   salario,peso;
+        int      edad;
+
 
         miScanner = new Scanner(System.in); // General para todos los ejemplos
-
-        //Ingresar cadena de caracteres
-        System.out.println("Ingrese el nombre");
-        nombre = miScanner.nextLine();  // Lee la entrada del usuario, como string
-        System.out.println("Nombre " + nombre);  // Output user input
-
-        //Ejemplo 2
-      
-        int edad;
-        int hijos;
+   
         
-
-        System.out.println("Ingrese edad e hijos");
-
-        edad  = miScanner.nextInt();
-        hijos = miScanner.nextInt();
-        System.out.printf("Edad: %d Hijos: %d",edad,hijos);
-       
-        // Ejemplo 3
-
-        String[] entrada; 
-        Double salario,peso;
-        //int edad;
-
         
         System.out.println("Digite salario, peso, edad ");
         
@@ -199,49 +181,34 @@ public class Conceptos {
         peso    = Double.parseDouble(entrada[1]);
         edad    = Integer.parseInt(entrada[2]);  
         
-        System.out.printf("Salario: %f Peso: %f  Edad:  %d",salario,peso,edad);
+        System.out.printf("Salario: %f Peso: %f  Edad:  %d ",salario,peso,edad);
+        
+        
+        
+        // Ejemplo 2
+        
+        //Ingresar cadena de caracteres
+        System.out.println("\n Ingrese el nombre");
+        nombre = miScanner.nextLine();  // Lee la entrada del usuario, como string
+        System.out.println("Nombre " + nombre);  // Output user input
+
+        //Ejemplo 3
+      
+        //int edad;
+        int hijos;
+        
+
+        System.out.println("Ingrese edad e hijos");
+
+        edad  = miScanner.nextInt();
+        hijos = miScanner.nextInt();
+        System.out.printf("Edad: %d Hijos: %d",edad,hijos);
+       
+        
 
     }
 
     public static void realizarDecisiones() {
-      // Ejemplos en Pythonn
-
-  
-    //   ladoUno,ladoDos,ladoTres = input("Digite el valor del lado uno del triángulo   : "), \
-    //                              input("Digite el valor del lado dos del triángulo   : "), \
-    //                               input("Digite el valor del lado tres del triángulo  : ")
-      
-
-    //  // If sencillo
-    //  if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
-    //     print ("El triángulo es escaleno")
-
-    
-    // // If-else
-    // if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
-    //     print ("El triángulo es escaleno")
-    // else:
-    //     print ("El triángulo no es escaleno")
-
-    // // if-else anidado
-    //  if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
-    //        print ("El triángulo es escaleno")
-    //  else:
-    //        if  (ladoUno == ladoDos == ladoTres):
-    //            print ("El triángulo es equilátero ")
-    //        else:
-    //            print ("El triángulo es isósceles ")
-
-    //  // elif
-    //  if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
-    //      print ("El triángulo es escaleno")
-    //  elif (ladoUno == ladoDos == ladoTres):
-    //        print ("El triángulo es equilátero ")
-    //  else:
-    //       print ("El triángulo es isósceles ")
-               
-
-
         Scanner miScanner;                  // Create un objeto  Scanner
         String  entrada;
         
@@ -249,13 +216,28 @@ public class Conceptos {
         miScanner = new Scanner(System.in); // General para todos los ejemplos
 
 
-        System.out.println("Digite Nombre");
+        System.out.println("\n Digite Nombre");
         entrada = miScanner.nextLine();
 
+    
+    
+       //  If sencillo Python
+       //  if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
+       //     print ("El triángulo es escaleno")
+
+    
         // Condicional simple 
         if (entrada.equals("pepe")){
             System.out.println("Hola: " + entrada);
         }
+
+
+
+        // If-else Python
+        // if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
+        //     print ("El triángulo es escaleno")
+        // else:
+        //     print ("El triángulo no es escaleno")
 
         //Condicional doble
         if (entrada.equals("pepe")){
@@ -264,6 +246,18 @@ public class Conceptos {
         else{
             System.out.println("No eres pepe eres: " + entrada);
         }
+
+
+
+        //  if-else anidado  Python
+        //  if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
+        //        print ("El triángulo es escaleno")
+        //  else:
+        //        if  (ladoUno == ladoDos == ladoTres):
+        //            print ("El triángulo es equilátero ")
+        //        else:
+        //            print ("El triángulo es isósceles ")
+
 
         //Condicionales enlazados
 
@@ -291,7 +285,17 @@ public class Conceptos {
 
         }
 
-        //Condicionales enlazados elif
+
+
+        //  elif Python
+        //  if (ladoUno != ladoDos) and (ladoDos != ladoTres) and (ladoUno != ladoTres):
+        //      print ("El triángulo es escaleno")
+        //  elif (ladoUno == ladoDos == ladoTres):
+        //        print ("El triángulo es equilátero ")
+        //  else:
+        //       print ("El triángulo es isósceles ")
+        
+            //Condicionales enlazados elseif
 
         if (entradaCompuesta[0].equals("sumar")){
             System.out.println("suma carácteres:" + entradaCompuesta[1] + entradaCompuesta[2]);
@@ -302,7 +306,6 @@ public class Conceptos {
         } else {  System.out.println("multiplica números:" +   Double.toString((Double.parseDouble(entradaCompuesta[1]) * Double.parseDouble(entradaCompuesta[2]))));   
                   System.out.println("Operación desconocida");
         }
-
 
 
         //switch
@@ -368,14 +371,17 @@ public class Conceptos {
 
     
     public static double calcularMenor(double valora, double valorb) {
-         /* Estructura if-else
-            if (valora < valorb) {
-               menor = valora;            }
-            else{
-               menor = valorb;
-            }
+       /* Estructura if-else
+       if (valora < valorb) {
+           menor = valora;
+       }
+       else{
+           menor = valorb;
+       }
+
        */
-        
+
+
         double menor;
         menor = valora < valorb ? valora :  valorb;
         return menor;
@@ -463,63 +469,85 @@ public class Conceptos {
        
 
     }
-    
-    
+
+
     public static void crearArreglos() {
-    //  La sintaxis:
-    //  tipo[] nombre;
+        //  La sintaxis:
+        //  tipo[] nombre;
+        
+        //  nombre = new tipo[numeroDeElementos];
     
-    //  nombre = new tipo[numeroDeElementos];
+        //  En donde:
+        //     tipo: el tipo de dato del arreglo
+        //     nombre: la variable que tendrá el arreglo
+        //     numeroDeElementos: la cantidad de elementos que tendrá el arreglo
+         
+            byte[]    unByte;    
+            int[]     unEntero;  
+            long[]    unLong;    
+            double[]  unDoble;   
+            float[]   unFloat;   
+            boolean[] unBooleano;
+            String[]  unString;  
+            char[]    unCaracter; 
+           
+            unByte     = new byte[2];
+            unEntero   = new int[3];
+            unLong     = new long[3];
+            unDoble    = new double[3];
+            unFloat    = new float[3];
+            unBooleano = new boolean[3];
+            unString   = new String[] {"Hola","este","es"};
+            unCaracter = new char[] {'a','b','c'};
+    
+    
+            // LLenar el arreglo -Ejemplo 1 -
+    
+            unByte[0]= 1;
+            unByte[0]= 2;
+            System.out.println (unByte[0]);
+    
+    
+            // LLenar el arreglo -Ejemplo 2 -
+            Scanner miScanner;  // Create un objeto  Scanner
+            int edad;
+            
+            miScanner = new Scanner(System.in); // General para todos los ejemplos
+    
+    
+            for (int posicion = 0; posicion < unEntero.length; posicion++) {
+                 System.out.println ("Digite valor :");
+                 unEntero[posicion] = Integer.parseInt(miScanner.nextLine());
+            
+            }
+ 
+            
+           
+    }
+    
+    public static void operarCadenas() {
+        String  cadenaA,cadenaB,cadenaC,subCadena;
+        boolean unBooleano;
+        char    caracter;
+        int     posicion;
 
-    //  En donde:
-    //     tipo: el tipo de dato del arreglo
-    //     nombre: la variable que tendrá el arreglo
-    //     numeroDeElementos: la cantidad de elementos que tendrá el arreglo
-     
-        byte[]    unByte;    
-        int[]     unEntero;  
-        long[]    unLong;    
-        double[]  unDoble;   
-        float[]   unFloat;   
-        boolean[] unBooleano;
-        String[]  unString;  
-        char[]    unCaracter; 
-       
-        unByte     = new byte[2];
-        unEntero   = new int[3];
-        unLong     = new long[3];
-        unDoble    = new double[3];
-        unFloat    = new float[3];
-        unBooleano = new boolean[3];
-        unString   = new String[] {"Hola","este","es"};
-        unCaracter = new char[] {"a","b","c"};
 
-
-        // LLenar el arreglo -Ejemplo 1 -
-
-        unByte[0]= 1;
-        unByte[0]= 2;
-        System.out.println (unByte[0]);
-
-
-        // LLenar el arreglo -Ejemplo 2 -
-        Scanner miScanner;  // Create un objeto  Scanner
-        int edad;
-        
-        miScanner = new Scanner(System.in); // General para todos los ejemplos
-
-
-        for (int posicion = 0; x < unEntero.length; posicion++) {
-             System.out.println ("Digite valor :");
-             unEntero[posicion] = Integer.parseInt(miScanner.nextLine());
-        
-        }
+        cadenaA     = "Java lenguaje";
+        cadenaB     = "Java";
+        unBooleano  = cadenaA.equals(cadenaB);
+        unBooleano  = cadenaA.contains(cadenaB);
+        subCadena   = cadenaA.substring(1,3);
+        caracter    = cadenaA.charAt(2);
+        posicion    = cadenaA.indexOf("l");
+        posicion    = cadenaA.lastIndexOf("e");        
+        unBooleano  = cadenaA.startsWith("Ja");
+        subCadena   = cadenaA.replace("Java", "Pava");
+        subCadena   = cadenaA.toLowerCase();
+        subCadena   = cadenaA.toUpperCase();
 
 
 
 
-        
-       
     }
 
 
