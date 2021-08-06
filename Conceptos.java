@@ -520,6 +520,15 @@ public class Conceptos {
                  unEntero[posicion] = Integer.parseInt(miScanner.nextLine());
             
             }
+        
+           // recorrer el arreglo foreach
+            
+            int suma = 0;
+            for (int contenido : unEntero){
+                suma = suma + contenido;
+            }
+            System.out.println(suma);
+ 
  
             
            
