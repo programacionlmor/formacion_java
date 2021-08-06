@@ -12,6 +12,7 @@ public class Conceptos {
         realizarDecisiones();
         crearFunciones();
         realizarCiclos();
+        crearArreglos();
     }
 
     
@@ -462,5 +463,64 @@ public class Conceptos {
        
 
     }
+    
+    
+    public static void crearArreglos() {
+    //  La sintaxis:
+    //  tipo[] nombre;
+    
+    //  nombre = new tipo[numeroDeElementos];
+
+    //  En donde:
+    //     tipo: el tipo de dato del arreglo
+    //     nombre: la variable que tendrá el arreglo
+    //     numeroDeElementos: la cantidad de elementos que tendrá el arreglo
+     
+        byte[]    unByte;    
+        int[]     unEntero;  
+        long[]    unLong;    
+        double[]  unDoble;   
+        float[]   unFloat;   
+        boolean[] unBooleano;
+        String[]  unString;  
+        char[]    unCaracter; 
+       
+        unByte     = new byte[2];
+        unEntero   = new int[3];
+        unLong     = new long[3];
+        unDoble    = new double[3];
+        unFloat    = new float[3];
+        unBooleano = new boolean[3];
+        unString   = new String[] {"Hola","este","es"};
+        unCaracter = new char[] {"a","b","c"};
+
+
+        // LLenar el arreglo -Ejemplo 1 -
+
+        unByte[0]= 1;
+        unByte[0]= 2;
+        System.out.println (unByte[0]);
+
+
+        // LLenar el arreglo -Ejemplo 2 -
+        Scanner miScanner;  // Create un objeto  Scanner
+        int edad;
+        
+        miScanner = new Scanner(System.in); // General para todos los ejemplos
+
+
+        for (int posicion = 0; x < unEntero.length; posicion++) {
+             System.out.println ("Digite valor :");
+             unEntero[posicion] = Integer.parseInt(miScanner.nextLine());
+        
+        }
+
+
+
+
+        
+       
+    }
+
 
 }
